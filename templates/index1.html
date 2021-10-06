@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>GUI DEMO</title>
+
+  
+</head>
+
+<body>
+ <div class="login">
+    <h1>Addition Demo</h1>
+
+     <!-- Main Input For Receiving Query to our Addition -->
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="Enter the First No" placeholder="Enter the First No" required="required" />
+        <input type="text" name="Enter the Second No" placeholder="Enter the Second No" required="required" />
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Add</button>
+    </form>
+
+   <br>
+   <br>
+     
+   {{ result_check}}
+
+ </div>
+
+
+</body>
+</html>
