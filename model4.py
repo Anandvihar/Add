@@ -7,7 +7,7 @@ Created on Wed Oct  6 17:28:57 2021
 
 import numpy as np
 import pandas as pd
-import pickle as p
+import pickle 
 #import sklearn
 from sklearn.linear_model import LinearRegression
 #from sklearn.model_selection import fit_grid_point

@@ -10,14 +10,14 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 import os
 
-app_1 = Flask(__name__)
+app = Flask(__name__)
 model4 = pickle.load(open('model4.pkl', 'rb'))
 
-@app_1.route("/")
+@app.route("/")
 def home():
     return render_template('index1.html')
 
-@app_1.route("/predict", methods=["POST"])
+@app.route("/predict", methods=["POST"])
 def predict():
     '''
     For rendering results on HTML GUI
@@ -34,5 +34,5 @@ def predict():
 if __name__ == "__main__":
     #app_1.run(host='150.129.130.254',port='8000')
     #app_1.run(host='0.0.0.1', port='8888')
-    app_1.run()
+    app.run()
     #debug=True
